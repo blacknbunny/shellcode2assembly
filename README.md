@@ -10,7 +10,7 @@ shellcode = ''
 [![Conda](https://img.shields.io/conda/pn/conda-forge/python.svg)]()
 
 ## Installation
-`git clone https://github.com/blacknbunny/ShellcodeToAssembly.git && cd ShellcodeToAssembly/ && chmod +x shellcodetoasm.py && pip install -r requirements.txt`
+`git clone https://github.com/blacknbunny/ShellcodeToAssembly.git && cd ShellcodeToAssembly/ && pip install -r requirements.txt && python2 shellcode.py`
 
 
 ## Modules manual installation

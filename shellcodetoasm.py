@@ -29,7 +29,7 @@ def error(error):
 if len(sys.argv) != 3:
     cls()
     print("Author : https://www.github.com/blacknbunny")
-    print("Usage:\tpython2 [returnbit] [architecture]")
+    print("Usage:\t./shellcodetoasm.py [shellcode] [returnbit] [architecture]")
     sys.exit(1)
 else:
     cls()
@@ -47,9 +47,9 @@ else:
             holefunc(CS_ARCH_PPC, CS_MODE_64)
         elif arch == 'x86':
             holefunc(CS_ARCH_X86, CS_MODE_64)
-        else:
-            error("architecture")
-    if returnbit == '32':
+    	else:
+       	    error("architecture")
+    elif returnbit == '32':
         if arch == 'arm':
             holefunc(CS_ARCH_ARM, CS_MODE_ARM)
         if arch == 'arm64':

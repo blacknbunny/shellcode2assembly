@@ -32,8 +32,8 @@ if len(sys.argv) != 3:
     print("Usage:\t./shellcodetoasm.py [shellcode] [returnbit] [architecture]")
     sys.exit(1)
 else:
-    '''cls()
-    loading()'''
+    cls()
+    loading()
     returnbit = sys.argv[1]
     arch = sys.argv[2]
     if returnbit == '64':

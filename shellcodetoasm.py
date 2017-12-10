@@ -29,7 +29,7 @@ def error(error):
 if len(sys.argv) != 3:
     cls()
     print("Author : https://www.github.com/blacknbunny")
-    print("Usage:\t./shellcodetoasm.py [shellcode] [returnbit] [architecture]")
+    print("Usage:\t./shellcodetoasm.py [returnbit] [architecture]")
     sys.exit(1)
 else:
     cls()

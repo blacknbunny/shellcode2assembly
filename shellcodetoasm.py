@@ -2,7 +2,7 @@ from capstone import *
 import time, sys, platform, os
 
 # Change here
-shellcode = '\x31\xf6'
+shellcode = '\x31\xf6\x48\xbb\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x56\x53\x54\x5f\x6a\x3b\x58\x31\xd2\x0f\x05'
 
 def loading():
     print "Loading..."
@@ -18,6 +18,10 @@ def cls():
 
 def holefunc(architecture, mode):
     options = Cs(architecture, mode)
+    if sys.argv[3] == 'att':
+        options.syntax = CS_OPT_SYNTAX_ATT
+    else:
+        options.syntax = CS_OPT_SYNTAX_INTEL
     listofinstructions = options.disasm(shellcode, 0x2000)
     for shtoasm in listofinstructions:
         print("%x\t%s\t%s" %(shtoasm.address, shtoasm.mnemonic, shtoasm.op_str))
@@ -29,7 +33,7 @@ def error(error):
 if len(sys.argv) != 3:
     cls()
     print("Author : https://www.github.com/blacknbunny")
-    print("Usage:\t./shellcodetoasm.py [returnbit] [architecture]")
+    print("Usage:\t./shellcodetoasm.py [returnbit] [architecture] [assembly-flavor]")
     sys.exit(1)
 else:
     cls()

@@ -2,7 +2,7 @@ from capstone import *
 import time, sys, platform, os
 
 # Change here
-shellcode = '\x31\xf6\x48\xbb\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x56\x53\x54\x5f\x6a\x3b\x58\x31\xd2\x0f\x05'
+shellcode = '\x31\xf6'
 
 def loading():
     print "Loading..."
@@ -30,7 +30,7 @@ def error(error):
     print("Select the bit %s" % (error))
     sys.exit(1)
 
-if len(sys.argv) != 3:
+if len(sys.argv) < 3:
     cls()
     print("Author : https://www.github.com/blacknbunny")
     print("Usage:\t./shellcodetoasm.py [returnbit] [architecture] [assembly-flavor]")

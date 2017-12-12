@@ -52,13 +52,13 @@ else:
     elif returnbit == '32':
         if arch == 'arm':
             holefunc(CS_ARCH_ARM, CS_MODE_ARM)
-        if arch == 'arm64':
+        elif arch == 'arm64':
             holefunc(CS_ARCH_ARM64, CS_MODE_ARM)
-        if arch == 'mips':
+        elif arch == 'mips':
             holefunc(CS_ARCH_MIPS, CS_MODE_MIPS32)
-        if arch == 'ppc':
+        elif arch == 'ppc':
             holefunc(CS_ARCH_PPC, CS_MODE_32)
-        if arch == 'x86':
+        elif arch == 'x86':
             holefunc(CS_ARCH_X86, CS_MODE_32)
         else:
             error("architecture")

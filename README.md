@@ -21,6 +21,7 @@ shellcode = ''
 
 ## For example
 `python2 shellcodetoasm.py 32 x86 att`
+
 `python2 shellcodetoasm.py 64 x86 intel`
 
 ## Architectures

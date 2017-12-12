@@ -17,10 +17,11 @@ shellcode = ''
 #### `pip install -r requirements.txt` it can be `pip2 install -r requirements.txt`
 
 ## Usage
-`python2 shellcodetoasm.py [returnbit] [architecture]`
+`python2 shellcodetoasm.py [returnbit] [architecture] [assembly-flavor]`
 
 ## For example
-`python2 shellcodetoasm.py 32 x86`
+`python2 shellcodetoasm.py 32 x86 att`
+`python2 shellcodetoasm.py 64 x86 intel`
 
 ## Architectures
 ### `ARM`
@@ -32,5 +33,9 @@ shellcode = ''
 ## Return Bit
 ### `64`
 ### `32`
+
+## Assembly Flavor
+### `ATT`
+### `INTEL`
 
 [![demo](https://asciinema.org/a/bxVxkc9U7FxmzDi34eF3bG2T0.png)](https://asciinema.org/a/bxVxkc9U7FxmzDi34eF3bG2T0?autoplay=1)

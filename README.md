@@ -1,6 +1,6 @@
 # ShellcodeToAssembly
 
-## Replace here with your shellcode. { Endian type is little endian. }
+## Replace in shellcodetoasm.py with your shellcode. { Endian type is little endian. }
 ```c
 shellcode = ''
 ```

@@ -18,10 +18,11 @@ def cls():
 
 def holefunc(architecture, mode):
     options = Cs(architecture, mode)
-    if sys.argv[3] == 'att':
-        options.syntax = CS_OPT_SYNTAX_ATT
-    else:
-        options.syntax = CS_OPT_SYNTAX_INTEL
+    try:
+    	if sys.argv[3] == 'att':
+        	options.syntax = CS_OPT_SYNTAX_ATT
+    except:
+	    options.syntax = CS_OPT_SYNTAX_INTEL
     listofinstructions = options.disasm(shellcode, 0x2000)
     for shtoasm in listofinstructions:
         print("%x\t%s\t%s" %(shtoasm.address, shtoasm.mnemonic, shtoasm.op_str))

@@ -24,9 +24,10 @@ def holefunc(architecture, mode):
     except:
 	    options.syntax = CS_OPT_SYNTAX_INTEL
     listofinstructions = options.disasm(shellcode, 0x2000)
+    print("\n")
     for shtoasm in listofinstructions:
         print("%x\t%s\t%s" %(shtoasm.address, shtoasm.mnemonic, shtoasm.op_str))
-    s = raw_input("Do you want to write shellcode bytes to an file ? Y/n : ")
+    s = raw_input("\nDo you want to write shellcode bytes to an file ? Y/n : ")
     if s == 'Y' or s == 'y' or s == '':
         with open("shellcode", "w") as f:
             f.write(shtoasm.bytes)

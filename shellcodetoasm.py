@@ -26,6 +26,13 @@ def holefunc(architecture, mode):
     listofinstructions = options.disasm(shellcode, 0x2000)
     for shtoasm in listofinstructions:
         print("%x\t%s\t%s" %(shtoasm.address, shtoasm.mnemonic, shtoasm.op_str))
+    s = raw_input("Do you want to write shellcode bytes to an file ? Y/n : ")
+    if s == 'Y' or s == 'y' or s == '':
+        with open("shellcode", "w") as f:
+            f.write(shtoasm.bytes)
+            f.close()
+    else:
+        return False
 def error(error):
     cls()
     print("Select the bit %s" % (error))

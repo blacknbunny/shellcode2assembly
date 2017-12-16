@@ -1,5 +1,5 @@
 from capstone import *
-import time, sys, platform, os
+import time, sys, os
 
 # Change here
 shellcode = ''

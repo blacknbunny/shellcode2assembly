@@ -38,7 +38,7 @@ shellcode = ''
 ### `32`
 
 ## Assembly Flavor
-### `ATT`
+### `AT&T`
 ### `INTEL`
 
 ------

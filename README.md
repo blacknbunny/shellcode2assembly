@@ -7,7 +7,6 @@ shellcode = ''
 ---------
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]()
-[![Conda](https://img.shields.io/conda/pn/conda-forge/python.svg)]()
 
 ## Installation
 `git clone https://github.com/blacknbunny/ShellcodeToAssembly.git && cd ShellcodeToAssembly/ && pip2 install -r requirements.txt && python2 shellcodetoasm.py`
